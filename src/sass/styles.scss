@@ -1,0 +1,19 @@
+// RESET 
+@import "./base/reset.scss";
+
+// ABSTRACT 
+@import "./abstract/variable.scss";
+@import "./abstract/mixin.scss";
+
+
+// UTILITIES 
+@import "./utils/utilities.scss";
+
+
+// COMPONENT 
+@import "../App.scss";
+@import "../components/home/home.scss";
+@import "../components/createBook/createBook.scss";
+@import "../components/allBooks/allBooks.scss";
+@import "../components/cardBook/bookCard.scss";
+@import "../components/deleteBook/deleteBook.scss";
