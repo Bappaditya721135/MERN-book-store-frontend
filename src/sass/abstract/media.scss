@@ -1,0 +1,37 @@
+@mixin media($screen-size) {
+    @if $screen-size == 1800px {
+        @media(min-width: $screen-size) {
+            @content;
+        }
+    }
+    @if $screen-size == 1200px {
+        @media(max-width: $screen-size) {
+            @content;
+        }
+    }
+    @if $screen-size == 900px {
+        @media(max-width: $screen-size) {
+            @content;
+        }
+    }
+    @if $screen-size == 750px {
+        @media(max-width: $screen-size) {
+            @content;
+        }
+    }
+    @if $screen-size == 627px {
+        @media(max-width: $screen-size) {
+            @content;
+        }
+    }
+    @if $screen-size == 480px {
+        @media(max-width: $screen-size) {
+            @content;
+        }
+    }
+    @if $screen-size == 350px {
+        @media(max-width: $screen-size) {
+            @content;
+        }
+    }
+}

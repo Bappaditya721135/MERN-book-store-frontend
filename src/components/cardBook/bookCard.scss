@@ -1,0 +1,62 @@
+.book--card {
+    padding: 1.5rem;
+    width: $box-width;
+    height: $box-height;
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    @include flex(space-around);
+    flex-direction: column;
+    // WIDTH 750PX OR LESS 
+    @include media(750px) {
+        width: 25rem;
+        height: 16rem;
+    }
+     
+    // WIDTH 627PX OR LESS 
+    @include media(627px) {
+        width: 35rem;
+        height: 20rem;
+        font-size: 1.8rem;
+    }
+
+
+
+    &__details {
+        height: 60%;
+        @include flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    &__edit {
+        width: 100%;
+        text-align: right;
+        padding-inline: 1rem;
+
+
+        a {
+            margin: 1rem;
+            svg {
+                width: 2.5rem;
+                height: 2.5rem;
+                color: inherit;
+                :hover {
+                    transform: scale(1.1);
+                }
+            }
+
+        }
+    }
+}
+
+.btn {
+    &__edit {
+        color: blue;
+    }
+    &__delete {
+        color: red;
+    }
+}

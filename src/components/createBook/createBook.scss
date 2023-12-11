@@ -1,0 +1,92 @@
+.book--container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    @include flex();
+
+
+    .book__form {
+        padding: 3rem;
+        width: 40rem;
+        height: 40rem;
+        @include flex(space-between);
+        border: 2px solid white;
+        border-radius: 10px;
+        flex-direction: column;
+
+        @include media(480px) {
+            max-width: 40rem;
+            width: 100%;
+        }
+        @include media(350px) {
+            padding: 2rem 1rem;
+            height: 35rem;
+        }
+
+        .form__heading {
+            text-decoration: underline;
+            @include media(350px) {
+                font-size: 1.2rem;
+            }
+        }
+
+
+        .form__group {
+            @include flex(_,flex-start);
+            gap: 0.5rem;
+            flex-direction: column;
+            @include media(350px) {
+                width: 100%;
+                &:last-child {
+                    @include flex(center);
+                }
+            }
+
+            input {
+                width: 30rem;
+                height: 3rem;
+                border-radius: 3px;
+                outline: none;
+                padding: 5px 10px;
+                @include media(350px) {
+                    max-width: 30rem;
+                    width: 100%;
+                }
+            }
+            label {
+                font-size: 1.2rem;
+                // transform: translateX(1rem, 0);
+                transform: translateX(1rem);
+                transition: 0.3s ease-out;
+            }
+
+            input:placeholder-shown + label{
+                transform: translate(1rem, -2rem);
+                opacity: 0;
+            }
+            
+        }
+    }
+}
+
+.btn__back {
+    text-decoration: none;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    border: 1px solid white;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    &:hover {
+        background-color: $color-primary;
+        svg {
+            color: #003049;
+        }
+    }
+}

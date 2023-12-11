@@ -1,0 +1,31 @@
+.home {
+    padding: 1rem;
+
+    // HOME HEADING TEXT 
+    &__heading-text {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .new__book--link {
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+        border: 1px solid white;
+        padding: 3px 5px;
+        border-radius: 3px;
+        background-color: #003049;
+        svg {
+            font-size: 2rem;
+            color: white;
+        }
+        &:hover {
+            background-color: white;
+            border: 1px solid #003049;
+            svg {
+                color: #003049;
+
+            }
+        }
+    }
+}
