@@ -3,11 +3,15 @@ import {FaArrowLeft} from "react-icons/fa";
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
+// CONTEXT 
+import { Context } from "../../App.jsx";
+
 function EditBook() {
     const {id} = useParams();
     const [book, setBook] = useState(null)
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null)
+
 
     // NAVIGATE 
     const navigate = useNavigate();
@@ -48,7 +52,7 @@ function EditBook() {
                 const res = await axios.put(`https://book-store-ljzp.onrender.com/books/${id}`,book)
                 navigate("/");
             } catch (error) {
-               console.error(error); 
+               setError(error)
             }
         }
         updateData();
