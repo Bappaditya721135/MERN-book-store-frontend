@@ -42,7 +42,7 @@ function CreateBook() {
 
   // IF ERROR IS TRUE 
   if(error) {
-    return <h3>{error.message}</h3>
+    return <h3 className="U-text-center U-fontsize-large">{error.message}</h3>
   }
   return (
     <div className="book--container">

@@ -9,6 +9,20 @@
     border-radius: 5px;
     @include flex(space-around);
     flex-direction: column;
+    // WIDTH 750PX OR LESS 
+    @include media(750px) {
+        width: 25rem;
+        height: 16rem;
+    }
+     
+    // WIDTH 627PX OR LESS 
+    @include media(627px) {
+        width: 35rem;
+        height: 20rem;
+        font-size: 1.8rem;
+    }
+
+
 
     &__details {
         height: 60%;

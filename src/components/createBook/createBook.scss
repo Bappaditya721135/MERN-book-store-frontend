@@ -14,8 +14,20 @@
         border-radius: 10px;
         flex-direction: column;
 
+        @include media(480px) {
+            max-width: 40rem;
+            width: 100%;
+        }
+        @include media(350px) {
+            padding: 2rem 1rem;
+            height: 35rem;
+        }
+
         .form__heading {
-            text-decoration: underline
+            text-decoration: underline;
+            @include media(350px) {
+                font-size: 1.2rem;
+            }
         }
 
 
@@ -23,6 +35,12 @@
             @include flex(_,flex-start);
             gap: 0.5rem;
             flex-direction: column;
+            @include media(350px) {
+                width: 100%;
+                &:last-child {
+                    @include flex(center);
+                }
+            }
 
             input {
                 width: 30rem;
@@ -30,6 +48,10 @@
                 border-radius: 3px;
                 outline: none;
                 padding: 5px 10px;
+                @include media(350px) {
+                    max-width: 30rem;
+                    width: 100%;
+                }
             }
             label {
                 font-size: 1.2rem;

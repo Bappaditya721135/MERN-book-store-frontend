@@ -55,11 +55,11 @@ function EditBook() {
     }
 
 if(loading) {
-    return <h2>loading...</h2>
+    return <h3 className="U-text-center U-fontsize-large">loading...</h3>
 }
 
 if(error) {
-    return <h2>{error.message}</h2>
+    return <h3 className="U-text-center U-fontsize-large">{error.message}</h3>
 }
   return (
     <div className="book--container">
