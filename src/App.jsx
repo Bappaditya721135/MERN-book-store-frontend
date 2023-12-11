@@ -12,6 +12,8 @@ import DeleteBook from './components/deleteBook/DeleteBook';
 
 // UTILS 
 import { getBooksFromLocalStorage } from './utils/initialFetch';
+
+// CONTEXT  
 export const Context = createContext();
 
 function App() {
@@ -19,8 +21,6 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // CONTEXT 
-
     if(!books) {
       const fetchBooks = async () => {
         try {
